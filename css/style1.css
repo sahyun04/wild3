@@ -1,0 +1,435 @@
+@charset "UTF-1" ;
+body{
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 400;
+}
+img{
+    max-width: 100%;
+}
+.container{
+    margin: 0 auto;
+    width: 1200px;
+    height: 1400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background: url(../images/sub10.jpg) center no-repeat;
+    background-size: cover;
+     font-family: "Berkshire Swash", stylish;
+            }
+
+/*---header start---*/
+header{
+    width: 100%;
+    height: 200px;
+/*     box-shadow: 0px -3px 15px 2px;*/
+    background-color: #f9f4f2;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-content: center;
+/*   background: url(../images/sub1.jpg);*/
+    }
+.logo{
+    position: absolute;
+    top: 2%;
+    left: 38%;
+    width:25%;
+    height:auto;
+     }
+.logo img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.header-container {
+  width: 100%;
+  margin: auto; 
+  display: flex;
+flex-direction: column; 
+  align-items: center;
+}
+
+.main-menu {
+  width: 100%;
+ display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 13%; 
+  overflow: visible;
+   max-width: 700px; 
+    z-index: 10;
+}
+
+.main-menu a {
+   width: 100%;
+    text-align: center;
+    padding: .87em 1em;
+    display: block;
+    color: #222;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #fff;
+        }
+
+.main-menu a:hover {
+      color: #c14400;
+    font-weight: bold;
+}
+.main-menu li{
+    flex:0 0 1;
+}
+/*====================================
+  DROPDOWN MENU STYLES
+====================================*/
+  
+/* The hidden-at-first drop menus */
+.drop-menu {
+  display: flex;
+  flex-direction: column; /* This never changes */
+  align-items: center;
+  width: 100%; /* Allows sub buttons to stretch across button width in main-menu*/
+  transition: max-height .4s, opacity .3s;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden; /* Keeps links in drop menu from displaying until height is large enough */
+}
+
+
+.drop-menu > .menu-button {
+  height: 100%;
+  transition: transform .4s;
+  transform: translateY(-300%);
+  background-color: bisque; /* Makes the menu effects visible on close */ 
+}
+
+/* Makes for easy identifying when the drop menu is open */
+.dropdown-wrapper:hover > .menu-button {
+  color: #c14400;
+}
+
+/* The dropdown-wrapper wraps both the .main-menu button and drop down menu */
+/* Expands .drop-menu to children height, not setting an expicit height allows variable # of buttons */
+.dropdown-wrapper:hover .drop-menu{
+  max-height: 300px;  
+  opacity: 1;
+}
+
+/* The specifity keeps styles from affecting main menu button */
+.dropdown-wrapper:hover > .drop-menu .menu-button {
+  transform: translateY(0%); 
+}
+
+/*----#contents start--*/
+#contents{
+/*    flex: 1;*/
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1000px;
+   position: relative;
+    justify-content: center;
+    align-content: center;
+/*  background: url(../images/sub8.jpg) center no-repeat;*/
+    background-size: cover;
+        }
+.textBox{
+    flex: 1;
+     display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 100%;
+    height: 450px;
+   }
+.textBox .text_title{
+     background: #faf4ea;
+    width: 20%;
+    height: 40px;
+    line-height: 40px;
+   text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+      margin-top: 1%;
+    margin-left: 40%;
+    text-shadow: 2px 2px 4px #fff;
+  }
+
+.textBox1{
+   display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 350px;
+   }
+
+.text{
+    flex: 0 0 71%;
+    line-height: 1.8rem;
+    padding: 2%;
+    text-align: left;
+      }
+.text h3{
+    text-align: left;
+    padding-bottom: 1%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #fff;
+}
+.text_img{
+    flex: 0 0 25%;
+}
+
+/*----.slide start--*/
+ 
+ #slideshow {
+   flex: 0 0 1;
+    position:relative;
+     top: -10%;
+     left: 0;
+    width:98.58;
+    height:450px;
+    overflow:hidden;
+    border:8px solid #f7e3cc;
+}
+
+
+#slideshow img {
+    position:absolute;
+    width: 100% ;
+    height:100%;
+    top:0;
+    left:0;
+    margin: 0 autoa;
+/*
+    margin-left:-400px;
+    margin-top:-200px;
+*/
+    opacity:0;
+    -webkit-transition-property: opacity, -webkit-transform;
+    -webkit-transition-duration: 3s, 10s;
+       -moz-transition-property: opacity, -moz-transform;
+       -moz-transition-duration: 3s, 10s;
+        -ms-transition-property: opacity, -ms-transform;
+        -ms-transition-duration: 3s, 10s;
+         -o-transition-property: opacity, -o-transform;
+         -o-transition-duration: 3s, 10s;
+            transition-property: opacity, transform;
+            transition-duration: 3s, 10s;
+}
+
+/**
+ * We change the point of origin using four corners so images do not move in the same direction. 
+ * This technique allows us to create various paths while applying the same translate() values to all images (see the 'fx' class further below).
+ */
+
+#slideshow img  {
+    -webkit-transform-origin: bottom left;
+       -moz-transform-origin: bottom left;
+        -ms-transform-origin: bottom left;
+         -o-transform-origin: bottom left;
+            transform-origin: bottom left;
+}
+
+#slideshow :nth-child(2n+1) {
+    -webkit-transform-origin: top right;
+       -moz-transform-origin: top right;
+        -ms-transform-origin: top right;
+         -o-transform-origin: top right;
+            transform-origin: top right;
+}
+
+#slideshow :nth-child(3n+1) {
+    -webkit-transform-origin: top left;
+       -moz-transform-origin: top left;
+        -ms-transform-origin: top left;
+         -o-transform-origin: top left;
+            transform-origin: top left;
+}
+#slideshow :nth-child(4n+1) {
+  -webkit-transform-origin: bottom right;
+     -moz-transform-origin: bottom right;
+      -ms-transform-origin: bottom right;
+       -o-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+/**
+ * Because of the stacking context, we need to make sure that the first image (in source) is not hidden by the last one. 
+ * The rule below moves all images past the second one down the stack. 
+ * This is because the second image needs to show on top of the first one when it transitions in.
+ */
+
+#slideshow .fx:first-child + img ~ img  {
+    z-index:-1;
+}
+
+/**
+ * Because images are styled with a different point of origin, the following rule will create different panning effects.
+ */
+
+#slideshow .fx {
+    opacity:1;
+    -webkit-transform: scale(1.1);
+       -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+         -o-transform: scale(1.1);
+            transform: scale(1.1);
+}
+.slide_logo{
+    width: 30%;
+    height: 12%;
+    background: #fff;
+    border-radius: 3%;
+    position: absolute;
+   top: 50%;
+    left: 10%;
+    opacity: .6;
+   
+}
+.slide_logo h3{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    color: #000;
+    font-family: "Berkshire Swash", jua;
+    font-size: 2rem;
+      text-shadow: 2px 2px 4px #fff 3px 3px 5px #ccc;
+    
+}
+.slide_logo h1{
+    position: absolute;
+    top: 50%;
+    left: 33%;
+    color: #000;
+    font-family: 굴림;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #fff 3px 3px 5px #ccc;
+}
+/*------------ad start---*/
+.adBox{
+  position: absolute;
+    top: 88%;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+   }
+.ad_img{
+    flex: 1;
+    height: 50px;
+    padding-top:2%;
+}
+.ad-text{
+    flex: 1;
+    height: 150px;
+    line-height: 2em;
+    }
+.ad-text span{
+    font-weight: bold;
+}
+/*---footer start---*/
+footer{
+/*    background: url(../images/sub7.jpg);*/
+    width: 100%;
+    height: 80px;
+    line-height: 2em;
+    position: absolute;
+    top: 1320px;
+    left: 0%;
+    font-size: .875rem;
+   }
+
+/*====================================
+  MEDIA QUERIES
+====================================*/
+
+@media (min-width: 550px) {
+  
+  
+    /*====================================
+      DROP-MENU EFFECTS (LARGER SCREENS)
+    ====================================*/
+    /* Resets dropdown styles to not affect the effects. Overflow still set to hidden allows for menu effects like sliding in */
+      .effect {
+        transition: max-height 0s;
+        opacity: 1;
+        background: transparent;
+      }
+      .effect .menu-button {
+        transform: translateY(0%); 
+      }
+
+
+      .scissor .menu-button{
+        transform: translateX(-100%);
+      }
+      /* Selects every other menu button to slide the opposite way */
+      .scissor .menu-button:nth-child(2n+1) {
+        transform: translateX(100%);
+      }
+      .dropdown-wrapper:hover .scissor .menu-button {
+        transform: translateX(0%);
+      }
+
+
+      .fade-in .menu-button {
+        transition: opacity .5s;
+        opacity: 0;
+      }
+      .dropdown-wrapper:hover .fade-in .menu-button {
+        opacity: 1;
+      }
+      
+
+
+  .header-container {
+    width: 90%;
+  }
+
+  .header-container {
+    height: 200px;
+    justify-content: space-between; /* Pushes logo to top, nav bar all the way down */
+  } 
+  
+  .main-menu {   
+    flex-direction: row; /* Horizontal main menu buttons */
+    align-items: flex-start; /* Makes the top of the 'dropdown-wrapper' div stay flush with button top because it's aligned on the cross-axis */
+    height: 48px; /* Setting the height allows the dropdown outside of it's parent's bounds, therefore not compensated for by the flex. */
+    margin: 0;
+  }
+    
+  .main-menu > .menu-button {
+    width: 23%;
+    max-width: 150px;
+  }
+
+}
+
+@media (min-width: 850px) {
+
+  .header-container {
+    flex-direction: row; 
+    justify-content: space-around; 
+    height: 160px;
+	} 
+
+  .main-menu {
+ 		width: 60%;
+      margin-top: 15%;
+  	justify-content: space-between;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+}

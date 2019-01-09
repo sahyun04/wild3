@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enjoy Farm " 들꽃 "</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+     <link rel="stylesheet" href="css/reset.css">
+     <link rel="stylesheet" href="css/style.css">
+     <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|East+Sea+Dokdo|Gloria+Hallelujah|Kaushan+Script|Nanum+Brush+Script|Satisfy" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|East+Sea+Dokdo|Gamja+Flower|Gloria+Hallelujah|Jua|Kaushan+Script|Nanum+Brush+Script|Satisfy|Stylish" rel="stylesheet">
+     
+      
+</head>
+<div id="modal">
+    <div class="modal_contents">
+       
+       <div class="c">
+  <div class="box">
+    <div class="pot"></div>
+    <div class="sand">
+      <div class="stone"></div>
+      <div class="stone"></div>
+      <div class="stone"></div>
+    </div>
+    <div class="stem"></div>
+    <div class="leaf"></div>
+    <div class="leaf-2"></div>
+  </div>
+ </div> 
+        <h2> The present of God Herb is..... </h2>
+        <h3>향기와 맛이 있는 아름다운 농원</h3><br>
+
+        <p>"들꽃"은 허브농원이 추구하고자 하는 관상적 가치뿐만 아니라, <br>원예적 가치, 생활적 가치를 전합니다. </p>
+
+    <button><img class="btn" src="images/md2.png" alt=""></button>
+     </div>
+</div>
+<script>
+    $(function() {
+        $(".modal1").click(function() {
+            $("#modal").show();
+        });
+        $(".btn").click(function() {
+            $("#modal").hide();
+        });
+    });
+</script>
+
+<body>
+    <div class="container">
+       <header>
+       <div class="logo"><img src="images/hd1.png" alt=""></div>
+			<div class="header-container">
+				<nav class="main-menu">
+					
+					<div class="dropdown-wrapper menu-button">		
+						<a class="menu-button" href="#">들꽃 소개</a>
+							
+						<div class="drop-menu fade-in effect">
+							
+							<a class="menu-button" href="sub-menu1.html">프롤로그</a>
+							<a class="menu-button" href="sub-menu5.html">들꽃 카페</a>
+							<a class="menu-button" href="sub-menu4.html">들꽃 화원</a>
+							<a class="menu-button" href="sub-menu7.html">들꽃 공방</a>
+							<a class="menu-button" href="sub-menu6.html">들꽃 펜션</a>
+						</div>
+					</div>
+
+
+					<div class="dropdown-wrapper menu-button">		
+						<a class="menu-button" href="#" >들꽃 메뉴</a>
+							
+						<div class="drop-menu scissor effect">
+							
+							<a class="menu-button" href="sub-menu2.html">제철 메뉴</a>
+							<a class="menu-button" href="sub-menu8.html">사계절 메뉴</a>
+							<a class="menu-button" href="sub-menu9.html">들꽃차</a>
+							<a class="menu-button" href="sub-menu10.html">들꽃케이크  &떡</a>
+							
+						</div>
+					</div>
+
+
+					<div class="dropdown-wrapper menu-button">
+							
+						<a class="menu-button" href="#" >주변 관광</a>
+							
+						<div class="drop-menu">
+							<a class="menu-button" href="sub-menu3.html">들꽃 농원 전경</a>
+							<a class="menu-button" href="https://map.naver.com/?elng=3e1aaaa8a66a212ecb3955df0977457b27bddb5aef5184471d8d09db8e79e773&eelat=f20daae18afcf1b1e75ea73beff05fa8&elat=691cc3285702b17403be4a334280863b06e3a6590f3b6fc39f051d7d523a5fc1&eText=%ED%8C%9C%EC%B9%B4%EB%B0%80%EB%A0%88&eelng=8a81e75e27a0e067766282f5b890634e">오시는 길</a>
+							<a class="menu-button" href="https://www.taean.go.kr/tour.do">주변 관광 안내</a>
+						</div>
+					</div>
+					
+				</nav>
+			</div>
+		</header>
+
+       
+        <div id="contents">
+        <div id="slideshow">
+      <img src="images/s2.jpg">
+	<img src="images/m-s1.png">
+	<img src="images/m-s2.jpg">
+	<img src="images/m-s3.jpg">
+	<img src="images/m-s4.jpg">
+	<img src="images/m-s5.jpg">
+	<img src="images/m-s8.jpg">
+	<img src="images/m-s7.jpg">
+</div>
+      <div class="slide_logo"><h3>Home of Aroma Farm </h3>
+      <h1>들꽃</h1></div>
+       <script>
+    
+(function(){
+
+// we set the 'fx' class on the first image when the page loads
+  document.getElementById('slideshow').getElementsByTagName('img')[0].className = "fx";
+  
+// this calls the kenBurns function every 4 seconds
+// you can increase or decrease this value to get different effects
+  window.setInterval(kenBurns, 6000);		
+  
+// the third variable is to keep track of where we are in the loop
+// if it is set to 1 (instead of 0) it is because the first image is styled when the page loads
+  var images          = document.getElementById('slideshow').getElementsByTagName('img'),
+      numberOfImages  = images.length,
+      i               = 1;
+
+  function kenBurns() {
+  if(i==numberOfImages){ i = 0;}
+  images[i].className = "fx";
+
+// we can't remove the class from the previous element or we'd get a bouncing effect so we clean up the one before last
+// (there must be a smarter way to do this though)
+  if(i===0){ images[numberOfImages-2].className = "";}
+  if(i===1){ images[numberOfImages-1].className = "";}
+  if(i>1){ images[i-2].className = "";}
+  i++;
+
+  }
+})();
+
+    </script>
+       <div class="notiBox">
+        <div class="notice">
+            <h3>공지사항</h3>
+           
+           <div class="notice_text">
+             <table>
+                 <tr>
+                 <td><p>2018년도 회원 솜씨자랑</p></td>
+                     <td>12. 26.</td>
+                </tr>
+                 <tr>
+                     <td><p>겨울방학 패키지 이벤트</p></td>
+                 <td>12. 24.</td>
+                 </tr>
+                 <tr>
+                     <td><p>들꽃 인테리어 소품 강연</p></td>
+                 <td>12. 13.</td>
+                 </tr>
+                 <tr>
+                     <td><p>12월 연말 모임에 어울....</p></td>
+                 <td>12. 12.</td>
+                 </tr>
+                  <tr>
+                      <td><p>들꽃 테마 펜션 사전 예약</p></td>
+                 <td>12. 11.</td>
+                 </tr>
+                
+             </table>
+             
+        </div>
+       </div>
+       
+        <div class="sns">
+            <h3>소통공간</h3>
+       
+        <div class="sns_text">
+            <div class="imgBox">
+                <a href="#"><img class="img1" src="images/n3.jpg" width="170" height="80" alt=""></a>
+                <a href="#"><img class="img2" src="images/n1.jpg" width="170" height="80" alt=""></a>
+                <a href="#"><img class="img3" src="images/m-s6.jpg" width="170" height="80" alt=""></a>
+                <p>회원님들의 솜씨자랑 경연대회 개최</p>
+                  <p>김소담회원님의 은방울꽃 모종 나눔</p>
+                  <p>김아담님의 겨울철 들꽃 키우기  Tip 대방출</p>
+            </div>
+        </div>
+        </div>
+            </div>
+        <div class="info">
+            <div class="info_title"><h3><a class="modal1" href="#">들꽃 허브농원</a></h3></div>
+              <div class="info_imgBox">
+           <div class="info-1"><img src="images/ff1.jpg"  width="270" height="150" alt=""><br>
+           <p><a href="sub-menu5.html">들꽃 카페</a></p></div>
+            <div class="info-2"><img src="images/bb2.jpg"  width="270"  height="150" alt=""><br>
+           <p><a class="modal2" href="sub-menu6.html">들꽃 펜션</a></p></div>
+            <div class="info-3"><img src="images/bb3.jpg"  width="270"  height="150" alt=""><br>
+           <p><a class="modal3" href="sub-menu7.html">들꽃 공방</a></p></div>
+            <div class="info-4"><img src="images/bb4.jpg"  width="270"  height="150" alt=""><br>
+           <p><a class="modal4" href="https://www.taean.go.kr/tour.do">주변관광지</a></p></div>
+            </div>
+        </div>
+       
+            <div class="iconbox"><a href="#"><img src="images/i6.png" width="200" height="40" alt=""></a></div>
+       
+        <div class="footer">
+            <p>주식회사 들꽃 ( 대표 : 박정철 )<br>    
+            ADDR : 충남 태안군 남면 우운길 56 - 19 주식회사 들꽃 농업회사 법인<br>
+사업자번호 : 316  - 81 -05442 통신판매업신고번호 : 제 2009 - 충남태안 - 0007호</p>
+        </div>
+        
+
+  
+     
+</body>
+<div id="pop">
+  <div style="height:500px;">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1> "들꽃 겨울 패키지 "</h1>
+    <p> 2018. 12. 20. ~ 2019. 2. 20.</p>
+    <p>사전예약 20% 할인행사</p>
+ 
+    <a href=""><b>예약하러 가기</b></a>
+  </div>
+
+   <div id="close" style="width:100px; margin:auto;">close</div>
+ 
+ 
+ </div>
+ <script type="text/javascript"> 
+ $(document).ready(function() {
+      $('#close').click(function() {
+        $('#pop').hide();
+      });
+    });
+</script>
+</html>

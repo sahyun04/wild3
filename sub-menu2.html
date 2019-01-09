@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Enjoy Farm " 들꽃 "</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <!--    <script src="js/jquery.bxslider.min.js"></script>-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="css/magnify.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style2.css">
+  <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|East+Sea+Dokdo|Gloria+Hallelujah|Kaushan+Script|Nanum+Brush+Script|Satisfy" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|East+Sea+Dokdo|Gamja+Flower|Gloria+Hallelujah|Jua|Kaushan+Script|Nanum+Brush+Script|Satisfy|Stylish" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo"><a href="index.html"><img src="images/hd1.png" alt=""></a></div>
+            <div class="header-container">
+                <nav class="main-menu">
+
+                    <div class="dropdown-wrapper menu-button">
+                        <a class="menu-button" href="#">들꽃 소개</a>
+
+                        <div class="drop-menu fade-in effect">
+
+                            <a class="menu-button" href="sub-menu1.html">프롤로그</a>
+                            <a class="menu-button" href="sub-menu5.html">들꽃 카페</a>
+                            <a class="menu-button" href="sub-menu4.html">들꽃 화원</a>
+                            <a class="menu-button" href="#">들꽃 공방</a>
+                            <a class="menu-button" href="sub-menu6.html">들꽃 펜션</a>
+                        </div>
+                    </div>
+
+
+                    <div class="dropdown-wrapper menu-button">
+                        <a class="menu-button" href="#">들꽃 메뉴</a>
+
+                        <div class="drop-menu scissor effect">
+
+                            <a class="menu-button" href="sub-menu2.html">제철 메뉴</a>
+                            <a class="menu-button" href="sub-menu8.html">사계절 메뉴</a>
+                            <a class="menu-button" href="sub-menu9.html">들꽃차</a>
+                            <a class="menu-button" href="sub-menu10.html">들꽃케이크 &떡</a>
+
+                        </div>
+                    </div>
+
+
+                    <div class="dropdown-wrapper menu-button">
+
+                        <a class="menu-button" href="#">주변 관광</a>
+
+                        <div class="drop-menu">
+                            <a class="menu-button" href="sub-menu3.html">들꽃 농원 전경</a>
+                            <a class="menu-button" href="https://map.naver.com/?elng=3e1aaaa8a66a212ecb3955df0977457b27bddb5aef5184471d8d09db8e79e773&eelat=f20daae18afcf1b1e75ea73beff05fa8&elat=691cc3285702b17403be4a334280863b06e3a6590f3b6fc39f051d7d523a5fc1&eText=%ED%8C%9C%EC%B9%B4%EB%B0%80%EB%A0%88&eelng=8a81e75e27a0e067766282f5b890634e">오시는 길</a>
+                            <a class="menu-button" href="https://www.taean.go.kr/tour.do">주변 관광 안내</a>
+                        </div>
+                    </div>
+
+                </nav>
+            </div>
+        </header>
+        <div id="contents">
+            <div class="menuBox"><h1> 들꽃's 제철 menu</h1></div>
+            <div class="menu_box1">
+                <div class="menu_big1">
+                    <img src="images/sm5s.jpg" alt="" width="330" height="330" class="magnify-image1" data-magnify-src="images/sm5.jpg">
+                </div>
+                <div class="menu_big2">
+                    <img src="images/sm9.jpg" alt="" width="330" height="330" class="magnify-image2" data-magnify-src="images/sm9s.jpg">
+                </div>
+                <div class="menu_big3">
+                <img src="images/sn4-1.jpg" alt="" width="330" height="330" class="magnify-image3" data-magnify-src="images/sm4.jpg">
+            </div>
+            </div>
+            <script src="js/jquery.magnify.js"></script>
+            <script>
+                $(document).ready(function() {
+                    $('.magnify-image1').magnify()
+                    $('.magnify-image2').magnify()
+                    $('.magnify-image3').magnify()
+                });
+            </script>
+
+
+
+            <div class="menu_box2">
+               <div id="slideshow">
+      <img src="images/fs1.jpg">
+	<img src="images/fs2.jpg">
+	<img src="images/fs3.jpg">
+	<img src="images/fs4.jpg">
+	<img src="images/fs5.jpg">
+	<img src="images/fs6.jpg">
+	<img src="images/fs7.jpg">
+	<img src="images/fs8.jpg">
+	<img src="images/fs9.jpg">
+</div>
+      <div class="slide_logo"><h3>Home of Aroma Farm </h3>
+      <h1>들꽃은 건강을 요리합니다.</h1>
+      <img src="images/cook.png" width="200" height="200" alt=""></div>
+       <script>
+    
+(function(){
+
+// we set the 'fx' class on the first image when the page loads
+  document.getElementById('slideshow').getElementsByTagName('img')[0].className = "fx";
+  
+// this calls the kenBurns function every 4 seconds
+// you can increase or decrease this value to get different effects
+  window.setInterval(kenBurns, 6000);		
+  
+// the third variable is to keep track of where we are in the loop
+// if it is set to 1 (instead of 0) it is because the first image is styled when the page loads
+  var images          = document.getElementById('slideshow').getElementsByTagName('img'),
+      numberOfImages  = images.length,
+      i               = 1;
+
+  function kenBurns() {
+  if(i==numberOfImages){ i = 0;}
+  images[i].className = "fx";
+
+// we can't remove the class from the previous element or we'd get a bouncing effect so we clean up the one before last
+// (there must be a smarter way to do this though)
+  if(i===0){ images[numberOfImages-2].className = "";}
+  if(i===1){ images[numberOfImages-1].className = "";}
+  if(i>1){ images[i-2].className = "";}
+  i++;
+
+  }
+})();
+
+    </script>  	
+            </div>
+
+            <div class="menu_box3">
+          
+	</div>
+             <div class="menu_small">
+                    <a href="#" class="gallery">
+                        <img src="images/cf1.jpg">
+                        <img src="images/cf2.jpg">
+                        <img src="images/cf3.jpg">
+                        <img src="images/cf4.jpg">
+                   </a>
+
+                    <a href="#" class="gallery">
+                        <img src="images/cf5.jpg">
+                        <img src="images/cf9.jpg">
+                        <img src="images/cf10.jpg">
+                        <img src="images/cf6.jpg">
+                    </a>
+                    <a href="#" class="gallery">
+
+                        <img src="images/cf7.jpg">
+                        <img src="images/cf8.jpg">
+                        <img src="images/cf11.jpg">
+                        <img src="images/cf12.jpg">
+                    </a>
+                </div>
+
+            </div>
+        
+
+    
+
+    <footer>
+       <br>
+        <p>주식회사 들꽃 (대표 : 박정철) <br>
+            ADDR. 충남 태안군 남면 우운길 56-19 주식회사 팜카밀레 농업회사법인</p>
+    </footer>
+
+    </div>
+
+
+</body>
+
+</html>

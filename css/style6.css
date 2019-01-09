@@ -1,0 +1,403 @@
+@charset "UTF-1" ;
+body{
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 400;
+}
+img{
+    max-width: 100%;
+}
+.container{
+    margin: 0 auto;
+    width: 1200px;
+    height: 1400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  background: url(../images/sub10.jpg) center no-repeat;
+    background-size: cover;
+     font-family: "Berkshire Swash", stylish;
+            }
+
+/*---header start---*/
+header{
+    width: 100%;
+    height: 200px;
+/*     box-shadow: 0px -3px 15px 2px;*/
+    background-color: #f9f4f2;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-content: center;
+      }
+.logo{
+    position: absolute;
+    top: 2%;
+    left: 36%;
+    width:25%;
+    height:auto;
+     }
+.logo img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.header-container {
+  width: 100%;
+  margin: auto; 
+  display: flex;
+flex-direction: column; 
+  align-items: center;
+}
+
+.main-menu {
+  width: 100%;
+ display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 13%; 
+  overflow: visible;
+   max-width: 700px; 
+    z-index: 10;
+}
+
+.main-menu a {
+   width: 100%;
+    text-align: center;
+    padding: .87em 1em;
+    display: block;
+    color: #222;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #fff;
+        }
+
+.main-menu a:hover {
+      color: #c14400;
+    font-weight: bold;
+}
+.main-menu li{
+    flex:0 0 1;
+}
+/*====================================
+  DROPDOWN MENU STYLES
+====================================*/
+  
+/* The hidden-at-first drop menus */
+.drop-menu {
+  display: flex;
+  flex-direction: column; /* This never changes */
+  align-items: center;
+  width: 100%; /* Allows sub buttons to stretch across button width in main-menu*/
+  transition: max-height .4s, opacity .3s;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden; /* Keeps links in drop menu from displaying until height is large enough */
+}
+
+
+.drop-menu > .menu-button {
+  height: 100%;
+  transition: transform .4s;
+  transform: translateY(-300%);
+  background-color: bisque; /* Makes the menu effects visible on close */ 
+}
+
+/* Makes for easy identifying when the drop menu is open */
+.dropdown-wrapper:hover > .menu-button {
+  color: #c14400;
+}
+
+/* The dropdown-wrapper wraps both the .main-menu button and drop down menu */
+/* Expands .drop-menu to children height, not setting an expicit height allows variable # of buttons */
+.dropdown-wrapper:hover .drop-menu{
+  max-height: 300px;  
+  opacity: 1;
+}
+
+/* The specifity keeps styles from affecting main menu button */
+.dropdown-wrapper:hover > .drop-menu .menu-button {
+  transform: translateY(0%); 
+}
+
+/*----#contents start--*/
+#contents{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1100px;
+    justify-content: center;
+    align-content: center;
+    background-size: cover;
+   
+               }
+
+/*
+.title    {
+    flex: 1;
+}
+*/
+h1{
+    flex: 1;
+    font-size: 2rem;
+    margin-top: 1em;
+   }
+.title span{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.wrap{
+    flex: 1;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    
+      }
+.cont{
+    flex: 0 0 60%;
+   
+   }
+
+.text{
+    flex: 0 0 35%;
+    height: 40%;
+    padding: 1%;
+    line-height: 2em;
+    text-align: left;
+    font-size: 1.1rem;
+   }
+
+
+.demo {
+  display: flex;
+  width: 100%;
+  height: 150%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  }
+.demo__gallery {
+  width: 688px;
+  height: 460px;
+  padding: 2px;
+  flex-shrink: 0;
+  background: #eee;
+  perspective: 700px;
+  border-radius: 5px;
+    margin-top: -35%;
+}
+.demo__placeholder {
+  width: 110px;
+  height: 110px;
+  margin: 2px;
+  float: left;
+  background-color: lightslategrey;
+  border-radius: 5px;
+}
+.demo__part {
+  position: relative;
+  float: left;
+  width: 110px;
+  height: 110px;
+  margin: 2px;
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+  transition: all 0.3s ease-in-out;
+}
+.demo__part:hover .demo__part-front {
+  box-shadow: 0 0 10px black;
+  transform: scale(0.96);
+}
+.demo__part:hover .demo__part-front:after {
+  opacity: 0;
+}
+.demo__part-front, .demo__part-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.demo__part-front {
+  background-color: lightslategrey;
+  background-size: cover;
+  background-position: center;
+  transform: rotateX(0deg);
+  transition: all 0.2s ease;
+}
+.demo__part-front:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  content: "";
+  opacity: 0.5;
+  transition: all 0.2s ease;
+}
+.demo__part-back {
+  transform: rotateY(180deg) rotateX(0deg);
+}
+.demo__part-back-inner {
+  width: 680px;
+  height: 452px;
+  background-image: url(http://kirillkiyutin.com/img/nyc/nyc1.jpg);
+  background-size: cover;
+  background-position: center;
+  backface-visibility: hidden;
+}
+.demo__help {
+  margin-bottom: 7px;
+  font-size: 30px;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  color: white;
+}
+.demo__help a {
+  color: white;
+}
+.demo__help a:hover {
+  color: #e39999;
+}
+.demo__part-1-1 .demo__part-back-inner {
+  transform: translate(0px, 0px);
+}
+.demo__part-1-2 .demo__part-back-inner {
+  transform: translate(-114px, 0px);
+}
+.demo__part-1-3 .demo__part-back-inner {
+  transform: translate(-228px, 0px);
+}
+.demo__part-1-4 .demo__part-back-inner {
+  transform: translate(-342px, 0px);
+}
+.demo__part-1-5 .demo__part-back-inner {
+  transform: translate(-456px, 0px);
+}
+.demo__part-1-6 .demo__part-back-inner {
+  transform: translate(-570px, 0px);
+}
+.demo__part-2-1 .demo__part-back-inner {
+  transform: translate(0px, -114px);
+}
+.demo__part-2-2 .demo__part-back-inner {
+  transform: translate(-114px, -114px);
+}
+.demo__part-2-3 .demo__part-back-inner {
+  transform: translate(-228px, -114px);
+}
+.demo__part-2-4 .demo__part-back-inner {
+  transform: translate(-342px, -114px);
+}
+.demo__part-2-5 .demo__part-back-inner {
+  transform: translate(-456px, -114px);
+}
+.demo__part-2-6 .demo__part-back-inner {
+  transform: translate(-570px, -114px);
+}
+.demo__part-3-1 .demo__part-back-inner {
+  transform: translate(0px, -228px);
+}
+.demo__part-3-2 .demo__part-back-inner {
+  transform: translate(-114px, -228px);
+}
+.demo__part-3-3 .demo__part-back-inner {
+  transform: translate(-228px, -228px);
+}
+.demo__part-3-4 .demo__part-back-inner {
+  transform: translate(-342px, -228px);
+}
+.demo__part-3-5 .demo__part-back-inner {
+  transform: translate(-456px, -228px);
+}
+.demo__part-3-6 .demo__part-back-inner {
+  transform: translate(-570px, -228px);
+}
+.demo__part-4-1 .demo__part-back-inner {
+  transform: translate(0px, -342px);
+}
+.demo__part-4-2 .demo__part-back-inner {
+  transform: translate(-114px, -342px);
+}
+.demo__part-4-3 .demo__part-back-inner {
+  transform: translate(-228px, -342px);
+}
+.demo__part-4-4 .demo__part-back-inner {
+  transform: translate(-342px, -342px);
+}
+.demo__part-4-5 .demo__part-back-inner {
+  transform: translate(-456px, -342px);
+}
+.demo__part-4-6 .demo__part-back-inner {
+  transform: translate(-570px, -342px);
+}
+.show-front {
+  transform: none;
+}
+/*----sketchBox  start---*/
+
+.sketchBox{
+    flex: 1;
+    flex-direction: column;
+  }
+.sketchBox h2{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 3%;
+}
+.sketchBox span{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.sketch1{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+  
+   }
+.sketch1 .sketch-img{
+    flex: 0 0 25%;
+    border-radius: 100%;
+    margin-left: 2%;
+        }
+.sketch1 .sketch-img img{
+   border-radius: 100%;
+}
+.sketch1 .sketch-text{
+    flex: 0 0 25%;
+    margin: -2%;
+    margin-top: 2%;
+   line-height: 1.5em;
+}
+.sketch1 .sketch-text h3{
+    font-size: 2rem;
+    margin-bottom: 1em;
+}
+.sketch2{
+    margin-top: 6%;
+    margin-left: 10%;
+    
+}
+/*---footer start---*/
+    
+footer{
+    width: 100%;
+    height: 100px;
+     line-height: 2em;
+    font-size: .875rem;
+    text-align: center;
+   }
