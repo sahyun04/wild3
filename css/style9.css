@@ -193,11 +193,11 @@ h1{
   cursor: pointer;
            }
 .polaroid-imgbox1{
-    flex: 0 0 25%;
+    flex: 0 0 50%;
     
          }
 .polaroid-text1{
-    flex: 0 0 25%;
+    flex: 0 0 50%;
     height: 200px;
     line-height: 2em;
     text-align: left;
@@ -227,10 +227,10 @@ strong{
   cursor: pointer;
       }
 .polaroid-imgbox2{
-    flex: 0 0 25%;
+    flex: 0 0 50%;
 }
 .polaroid-text2{
-     flex: 0 0 25%;
+     flex: 0 0 50%;
     height: 200px;
     line-height: 2em;
     text-align: left;

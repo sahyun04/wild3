@@ -212,11 +212,11 @@ h1 {
 }
 
 .polaroid-imgbox1 {
-    flex: 0 0 25%;
+    flex: 0 0 50%;
 }
 
 .polaroid-text1 {
-    flex: 0 0 25%;
+    flex: 0 0 50%;
     height: 200px;
     width: 300px;
     line-height: 2em;
@@ -247,11 +247,11 @@ h1 {
 }
 
 .polaroid-imgbox2 {
-    flex: 0 0 25%;
+    flex: 0 0 50%;
 }
 
 .polaroid-text2 {
-    flex: 0 0 25%;
+    flex: 0 0 50%;
     height: 200px;
     width: 320px;
     line-height: 2em;
@@ -259,7 +259,7 @@ h1 {
     position: absolute;
     left: 64%;
     top: 38%;
-}
+   }
 
 .polaroid2 p {
     font-size: 1rem;
