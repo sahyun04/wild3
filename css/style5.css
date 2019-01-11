@@ -179,7 +179,7 @@ h1{
 
 .demo {
   display: flex;
-  width: 48vw;
+  width: 100%;
   height: 150%;
   align-items: center;
   justify-content: center;
@@ -382,6 +382,7 @@ h1{
     margin: -2%;
     margin-top: 2%;
    line-height: 1.5em;
+    text-align: left;
 }
 .sketch1 .sketch-text h3{
     font-size: 2rem;
