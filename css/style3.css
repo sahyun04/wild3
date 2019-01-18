@@ -325,4 +325,39 @@ footer{
     margin: 0;
   }
 
+    /*---mediaquary 1024 start ----*/
+@media (max-width: 1024px) {
+
+    .container{
+    margin: 0 auto;
+    width: 1024px;
+    height: 1600px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background: url(../images/main10.jpg);
+    font-family: "Berkshire Swash",stylish;
+          }
+
+    .header-container {
+    flex-direction: row;
+    justify-content: space-around;
+    height: auto;
+    width: 99.5%;
+     position: relative;
+        top: 20px;
+      	}
+  .main-menu {
+ 		width: 60%;
+     position: absolute;
+      top: -30px;
+     justify-content: space-between;
+
+  }
+   .logo {
+    margin: 0;
+      position: absolute;
+       top: 50px;
+       left: 35%;
+     }
 }
