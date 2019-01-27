@@ -20,7 +20,7 @@ img{
 .container{
     margin: 0 auto;
     width: 1200px;
-    height: 1400px;
+    height: 1600px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -134,24 +134,25 @@ flex-direction: column;
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 1100px;
+    height: auto;
     justify-content: center;
     align-content: center;
     background-size: cover;
-               }
+                     }
 .menuBox h1{
     font-size: 2rem;
     text-align: center;
     margin: .3em;
     font-family: "Berkshire Swash", stylish;
-}
+
+      }
 .menu_box1{
     flex:1;
     width: 100%;
     height: 30%;
     display: flex;
     flex-direction: row;
-        }
+          }
 .menu_big1{
     margin: 2% 2% 2% 4%;
 }
@@ -186,10 +187,10 @@ flex-direction: column;
  #slideshow {
    flex: 0 0 1;
     position:relative;
-     top: 12%;
+     top: 90%;
      left: 0;
     width:98.58;
-    height:350px;
+    height:450px;
     overflow:hidden;
     border:8px solid #f7e3cc;
 }
@@ -282,7 +283,7 @@ flex-direction: column;
     height: 12%;
    border-radius: 10%;
     position: absolute;
-   top: 112%;
+   top: 142%;
     left: 18%;
        
 }
@@ -318,13 +319,12 @@ flex-direction: column;
     width: 100%;
      height: 30%;
     flex-direction: row;
-     
-}
+    }
  a.gallery {
 	display: inline-block;
     margin: 42px;
     position: relative;
-     top: -260px;
+     top:280px;
 	width: 300px;
 }
 
@@ -366,126 +366,586 @@ footer{
      line-height: 2em;
     font-size: .875rem;
     text-align: center;
+    margin-top: 580px;
    }
-
 
 /*====================================
   MEDIA QUERIES
 ====================================*/
 
-@media (min-width: 550px) {
-  
-  
-    /*====================================
-      DROP-MENU EFFECTS (LARGER SCREENS)
-    ====================================*/
-    /* Resets dropdown styles to not affect the effects. Overflow still set to hidden allows for menu effects like sliding in */
-      .effect {
-        transition: max-height 0s;
-        opacity: 1;
-        background: transparent;
-      }
-      .effect .menu-button {
-        transform: translateY(0%); 
-      }
-
-
-      .scissor .menu-button{
-        transform: translateX(-100%);
-      }
-      /* Selects every other menu button to slide the opposite way */
-      .scissor .menu-button:nth-child(2n+1) {
-        transform: translateX(100%);
-      }
-      .dropdown-wrapper:hover .scissor .menu-button {
-        transform: translateX(0%);
-      }
-
-
-      .fade-in .menu-button {
-        transition: opacity .5s;
-        opacity: 0;
-      }
-      .dropdown-wrapper:hover .fade-in .menu-button {
-        opacity: 1;
-      }
-      
-
-
-  .header-container {
-    width: 90%;
-  }
-
-  .header-container {
-    height: 200px;
-    justify-content: space-between; /* Pushes logo to top, nav bar all the way down */
-  } 
-  
-  .main-menu {   
-    flex-direction: row; /* Horizontal main menu buttons */
-    align-items: flex-start; /* Makes the top of the 'dropdown-wrapper' div stay flush with button top because it's aligned on the cross-axis */
-    height: 48px; /* Setting the height allows the dropdown outside of it's parent's bounds, therefore not compensated for by the flex. */
-    margin: 0;
-  }
-    
-  .main-menu > .menu-button {
-    width: 23%;
-    max-width: 150px;
-  }
-
-}
-
-@media (min-width: 850px) {
-
-  .header-container {
-    flex-direction: row; 
-    justify-content: space-around; 
-    height: 160px;
-	} 
-
-  .main-menu {
- 		width: 60%;
-      margin-top: 15%;
-  	justify-content: space-between;
-  }
-
-  .logo {
-    margin: 0;
-  }
-
-    /*---mediaquary 1024 start ----*/
+/*---mediaquary 1024 start ----*/
 @media (max-width: 1024px) {
 
-    .container{
-    margin: 0 auto;
-    width: 1024px;
-    height: 1600px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    background: url(../images/main10.jpg);
-    font-family: "Berkshire Swash",stylish;
-          }
+    .container {
+        margin: 0 auto;
+        width: 1024px;
+        height: 1500px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        background: url(../images/sub10.jpg);
+        font-family: "Berkshire Swash", stylish;
+        background-size: cover;
+    }
 
     .header-container {
-    flex-direction: row;
-    justify-content: space-around;
-    height: auto;
-    width: 99.5%;
-     position: relative;
-        top: 20px;
-      	}
-  .main-menu {
- 		width: 60%;
-     position: absolute;
-      top: -30px;
-     justify-content: space-between;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 90%;
+         height: auto;
+        position: relative;
+                }
 
-  }
-   .logo {
-    margin: 0;
-      position: absolute;
-       top: 50px;
-       left: 35%;
-     }
+    .main-menu {
+        width: 60%;
+        height: auto;
+        position: absolute;
+        top: -50px;
+        justify-content: space-between;
+        z-index: 10;
+           }
+
+    .logo {
+        margin: 0;
+        position: absolute;
+        top: 50px;
+        left: 35%;
+    }
+
+    /*----#contents start--*/
+    #contents {
+        /*    flex: 1;*/
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        position: relative;
+        justify-content: center;
+        align-content: center;
+        /*  background: url(../images/sub8.jpg) center no-repeat;*/
+        background-size: cover;
+    }
+
+.menuBox h1{
+    font-size: 2rem;
+    text-align: center;
+    margin: .3em;
+    font-family: "Berkshire Swash", stylish;
+      margin-top: 3%;
 }
+.menu_box1{
+    flex:1;
+    width: 30%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5%;
+          }
+.menu_big1{
+    margin: 2% 2% 2% 4%;
+}
+.menu_big1 img{
+  border-radius: 100%;
+    border: 5px solid #fff;
+}
+.menu_big2{
+    margin:  2% 2% 2% 3%;
+}
+.menu_big2 img{
+  border-radius: 100%;
+    border: 5px solid #fff;
+}
+.menu_big3{
+    margin:  2% 2% 2% 3%;
+   }
+.menu_big3 img{
+  border-radius: 100%;
+    border: 5px solid #fff;
+}
+.menu_box2{
+     flex:1;
+    width: 100%;
+    height: 30%;
+     flex-direction: row;
+         }
+
+
+/*----.slide start--*/
+
+ #slideshow {
+   flex: 0 0 1;
+    position:relative;
+     top: 88%;
+     left: 0;
+    width:98.58;
+    height:450px;
+    overflow:hidden;
+    border:8px solid #f7e3cc;
+}
+
+
+#slideshow img {
+    position:absolute;
+    width: 100% ;
+    height:100%;
+    top:0;
+    left:0;
+    margin: 0 autoa;
+/*
+    margin-left:-400px;
+    margin-top:-200px;
+*/
+    opacity:0;
+    -webkit-transition-property: opacity, -webkit-transform;
+    -webkit-transition-duration: 3s, 10s;
+       -moz-transition-property: opacity, -moz-transform;
+       -moz-transition-duration: 3s, 10s;
+        -ms-transition-property: opacity, -ms-transform;
+        -ms-transition-duration: 3s, 10s;
+         -o-transition-property: opacity, -o-transform;
+         -o-transition-duration: 3s, 10s;
+            transition-property: opacity, transform;
+            transition-duration: 3s, 10s;
+}
+
+/**
+ * We change the point of origin using four corners so images do not move in the same direction.
+ * This technique allows us to create various paths while applying the same translate() values to all images (see the 'fx' class further below).
+ */
+
+#slideshow img  {
+    -webkit-transform-origin: bottom left;
+       -moz-transform-origin: bottom left;
+        -ms-transform-origin: bottom left;
+         -o-transform-origin: bottom left;
+            transform-origin: bottom left;
+}
+
+#slideshow :nth-child(2n+1) {
+    -webkit-transform-origin: top right;
+       -moz-transform-origin: top right;
+        -ms-transform-origin: top right;
+         -o-transform-origin: top right;
+            transform-origin: top right;
+}
+
+#slideshow :nth-child(3n+1) {
+    -webkit-transform-origin: top left;
+       -moz-transform-origin: top left;
+        -ms-transform-origin: top left;
+         -o-transform-origin: top left;
+            transform-origin: top left;
+}
+#slideshow :nth-child(4n+1) {
+  -webkit-transform-origin: bottom right;
+     -moz-transform-origin: bottom right;
+      -ms-transform-origin: bottom right;
+       -o-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+/**
+ * Because of the stacking context, we need to make sure that the first image (in source) is not hidden by the last one.
+ * The rule below moves all images past the second one down the stack.
+ * This is because the second image needs to show on top of the first one when it transitions in.
+ */
+
+#slideshow .fx:first-child + img ~ img  {
+    z-index:-1;
+}
+
+/**
+ * Because images are styled with a different point of origin, the following rule will create different panning effects.
+ */
+
+#slideshow .fx {
+    opacity:1;
+    -webkit-transform: scale(1.1);
+       -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+         -o-transform: scale(1.1);
+            transform: scale(1.1);
+}
+.slide_logo{
+    width: 50%;
+    height: 12%;
+   border-radius: 10%;
+    position: absolute;
+   top: 152%;
+    left: 18%;
+
+}
+.slide_logo h3{
+    position: absolute;
+    top: -570%;
+    left: 42%;
+    color: #fff;
+    font-family:"Berkshire Swash", stylish;
+    font-size: 1.25rem;
+      text-shadow: 2px 2px 4px #fff 3px 3px 5px #ccc;
+    
+}
+.slide_logo h1{
+    position: absolute;
+    top: -540%;
+    left: 30%;
+    color: #fff;
+    font-family:"Berkshire Swash", stylish;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #fff 3px 3px 5px #ccc;
+}
+
+.slide_logo img{
+    position: absolute;
+    top: -480%;
+    left: 80%;
+     }
+
+.menu_box3{
+    flex:1;
+    width: 100%;
+     height: 30%;
+    flex-direction: row;
+
+}
+ a.gallery {
+	display: inline-block;
+    margin: 40px;
+    position: relative;
+     top: 330px;
+     left: -1%;
+	width: 250px;
+}
+
+a.gallery img {
+	display: block;
+	position: absolute;
+	top: 0%;
+	left: 0;
+	padding:1px;
+	background: linear-gradient(#fff,#ccc);
+	width: 300px;
+	height: 280px;
+  -webkit-backface-visibility: hidden;
+	box-shadow: 0 2px 4px rgba(0,0,0,.5);
+	transition: .4s cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    border: 7px solid #fff;
+}
+
+a.gallery img:nth-child(3) { transform: rotate(3deg); }
+a.gallery img:nth-child(2) { transform: rotate(6deg); }
+
+a.gallery:hover img {
+	width: 150px;
+	height: 150px;
+    margin: 5px;
+}
+
+a.gallery:hover img:nth-child(1) { transform: translate(-10px, -10px); }
+a.gallery:hover img:nth-child(3) { transform: translate(-10px,160px); }
+a.gallery:hover img:nth-child(2) { transform: translate(160px, -10px); }
+a.gallery:hover img:nth-child(4) { transform: translate(160px, 160px); }
+
+
+/*---footer start---*/
+
+footer{
+    width: 100%;
+    height: 100px;
+     line-height: 2em;
+    font-size: .875rem;
+    text-align: center;
+   top: 30%;
+      }
+}
+
+/*---mediaquary 768 start ----*/
+@media (max-width: 768px) {
+    .logo{
+        width: 45%;
+        position: absolute;
+        left: 45%;
+    }
+}
+
+/*---mediaquary 360 start ----*/
+@media (max-width: 360px) {
+    .container{
+        height: auto;
+    }
+    .logo{
+        width: 100%;
+        position: absolute;
+        left: 85%;
+            }
+     .header-container {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 90%;
+         height: auto;
+        position: relative;
+                }
+
+    .main-menu {
+        width: 60%;
+        height: auto;
+        position: absolute;
+        top: -0px;
+        justify-content: space-between;
+        z-index: 10;
+           }
+
+    /*----#contents start--*/
+    #contents {
+        /*    flex: 1;*/
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        position: relative;
+        justify-content: center;
+        align-content: center;
+        /*  background: url(../images/sub8.jpg) center no-repeat;*/
+        background-size: cover;
+    }
+
+.menuBox h1{
+    font-size: 2rem;
+    text-align: center;
+    margin: .3em;
+    font-family: "Berkshire Swash", stylish;
+      margin-top: 3%;
+    position: absolute;
+    top: 7%;
+    left: 40%;
+}
+.menu_box1{
+    flex:1;
+    width: 30%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2%;
+    margin-top: 15%;
+          }
+.menu_big1{
+    margin: 2% 2% 2% 4%;
+}
+.menu_big1 img{
+  border-radius: 100%;
+    border: 5px solid #fff;
+}
+.menu_big2{
+    margin:  2% 2% 2% 3%;
+}
+.menu_big2 img{
+  border-radius: 100%;
+    border: 5px solid #fff;
+}
+.menu_big3{
+    margin:  2% 2% 2% 3%;
+   }
+.menu_big3 img{
+  border-radius: 100%;
+    border: 5px solid #fff;
+}
+.menu_box2{
+     flex:1;
+    width: 100%;
+    height: 30%;
+     flex-direction: row;
+         }
+
+
+/*----.slide start--*/
+
+ #slideshow {
+   flex: 0 0 1;
+    position:relative;
+     top: 84%;
+     left: 0;
+    width:98.58;
+    height:550px;
+    overflow:hidden;
+    border:8px solid #f7e3cc;
+}
+
+
+#slideshow img {
+    position:absolute;
+    width: 100% ;
+    height:100%;
+    top:0;
+    left:0;
+    margin: 0 autoa;
+/*
+    margin-left:-400px;
+    margin-top:-200px;
+*/
+    opacity:0;
+    -webkit-transition-property: opacity, -webkit-transform;
+    -webkit-transition-duration: 3s, 10s;
+       -moz-transition-property: opacity, -moz-transform;
+       -moz-transition-duration: 3s, 10s;
+        -ms-transition-property: opacity, -ms-transform;
+        -ms-transition-duration: 3s, 10s;
+         -o-transition-property: opacity, -o-transform;
+         -o-transition-duration: 3s, 10s;
+            transition-property: opacity, transform;
+            transition-duration: 3s, 10s;
+}
+
+/**
+ * We change the point of origin using four corners so images do not move in the same direction.
+ * This technique allows us to create various paths while applying the same translate() values to all images (see the 'fx' class further below).
+ */
+
+#slideshow img  {
+    -webkit-transform-origin: bottom left;
+       -moz-transform-origin: bottom left;
+        -ms-transform-origin: bottom left;
+         -o-transform-origin: bottom left;
+            transform-origin: bottom left;
+}
+
+#slideshow :nth-child(2n+1) {
+    -webkit-transform-origin: top right;
+       -moz-transform-origin: top right;
+        -ms-transform-origin: top right;
+         -o-transform-origin: top right;
+            transform-origin: top right;
+}
+
+#slideshow :nth-child(3n+1) {
+    -webkit-transform-origin: top left;
+       -moz-transform-origin: top left;
+        -ms-transform-origin: top left;
+         -o-transform-origin: top left;
+            transform-origin: top left;
+}
+#slideshow :nth-child(4n+1) {
+  -webkit-transform-origin: bottom right;
+     -moz-transform-origin: bottom right;
+      -ms-transform-origin: bottom right;
+       -o-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+/**
+ * Because of the stacking context, we need to make sure that the first image (in source) is not hidden by the last one.
+ * The rule below moves all images past the second one down the stack.
+ * This is because the second image needs to show on top of the first one when it transitions in.
+ */
+
+#slideshow .fx:first-child + img ~ img  {
+    z-index:-1;
+}
+
+/**
+ * Because images are styled with a different point of origin, the following rule will create different panning effects.
+ */
+
+#slideshow .fx {
+    opacity:1;
+    -webkit-transform: scale(1.1);
+       -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+         -o-transform: scale(1.1);
+            transform: scale(1.1);
+}
+.slide_logo{
+    width: 50%;
+    height: 12%;
+   border-radius: 10%;
+    position: absolute;
+   top: 142%;
+    left: 18%;
+
+}
+.slide_logo h3{
+    position: absolute;
+    top: -570%;
+    left: 42%;
+    color: #fff;
+    font-family:"Berkshire Swash", stylish;
+    font-size: 1.25rem;
+      text-shadow: 2px 2px 4px #fff 3px 3px 5px #ccc;
+
+}
+.slide_logo h1{
+    position: absolute;
+    top: -540%;
+    left: 30%;
+    color: #fff;
+    font-family:"Berkshire Swash", stylish;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #fff 3px 3px 5px #ccc;
+}
+
+.slide_logo img{
+    position: absolute;
+    top: -650%;
+    left: 95%;
+     }
+
+.menu_box3{
+    flex:1;
+    width: 100%;
+     height: 30%;
+    flex-direction: row;
+
+}
+ a.gallery {
+	display: inline-block;
+    margin: 40px;
+    position: relative;
+     top: 30px;
+     left: -1%;
+	width: 250px;
+}
+
+a.gallery img {
+	display: block;
+	position: absolute;
+	top: 0%;
+	left: 0;
+	padding:1px;
+	background: linear-gradient(#fff,#ccc);
+	width: 300px;
+	height: 280px;
+  -webkit-backface-visibility: hidden;
+	box-shadow: 0 2px 4px rgba(0,0,0,.5);
+	transition: .4s cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    border: 7px solid #fff;
+}
+
+a.gallery img:nth-child(3) { transform: rotate(3deg); }
+a.gallery img:nth-child(2) { transform: rotate(6deg); }
+
+a.gallery:hover img {
+	width: 150px;
+	height: 150px;
+    margin: 5px;
+}
+
+a.gallery:hover img:nth-child(1) { transform: translate(-10px, -10px); }
+a.gallery:hover img:nth-child(3) { transform: translate(-10px,160px); }
+a.gallery:hover img:nth-child(2) { transform: translate(160px, -10px); }
+a.gallery:hover img:nth-child(4) { transform: translate(160px, 160px); }
+
+
+/*---footer start---*/
+
+footer{
+    width: 100%;
+    height: 100px;
+     line-height: 2em;
+    font-size: .875rem;
+    text-align: center;
+  position: relative;
+    top: -200px;
+      }
+}
+

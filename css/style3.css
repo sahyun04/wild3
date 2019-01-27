@@ -155,7 +155,7 @@ h1 {
   width: 100%;
   height: 70vh;
     margin-bottom: 1%;
-}
+  }
 .gallery-wrap1 {
   display: flex;
   flex-direction: row;
@@ -240,124 +240,102 @@ footer{
     text-align: center;
    }
 
-
 /*====================================
   MEDIA QUERIES
 ====================================*/
 
-@media (min-width: 550px) {
-  
-  
-    /*====================================
-      DROP-MENU EFFECTS (LARGER SCREENS)
-    ====================================*/
-    /* Resets dropdown styles to not affect the effects. Overflow still set to hidden allows for menu effects like sliding in */
-      .effect {
-        transition: max-height 0s;
-        opacity: 1;
-        background: transparent;
-      }
-      .effect .menu-button {
-        transform: translateY(0%); 
-      }
-
-
-      .scissor .menu-button{
-        transform: translateX(-100%);
-      }
-      /* Selects every other menu button to slide the opposite way */
-      .scissor .menu-button:nth-child(2n+1) {
-        transform: translateX(100%);
-      }
-      .dropdown-wrapper:hover .scissor .menu-button {
-        transform: translateX(0%);
-      }
-
-
-      .fade-in .menu-button {
-        transition: opacity .5s;
-        opacity: 0;
-      }
-      .dropdown-wrapper:hover .fade-in .menu-button {
-        opacity: 1;
-      }
-      
-
-
-  .header-container {
-    width: 90%;
-  }
-
-  .header-container {
-    height: 200px;
-    justify-content: space-between; /* Pushes logo to top, nav bar all the way down */
-  } 
-  
-  .main-menu {   
-    flex-direction: row; /* Horizontal main menu buttons */
-    align-items: flex-start; /* Makes the top of the 'dropdown-wrapper' div stay flush with button top because it's aligned on the cross-axis */
-    height: 48px; /* Setting the height allows the dropdown outside of it's parent's bounds, therefore not compensated for by the flex. */
-    margin: 0;
-  }
-    
-  .main-menu > .menu-button {
-    width: 23%;
-    max-width: 150px;
-  }
-
-}
-
-@media (min-width: 850px) {
-
-  .header-container {
-    flex-direction: row; 
-    justify-content: space-around; 
-    height: 160px;
-	} 
-
-  .main-menu {
- 		width: 60%;
-      margin-top: 15%;
-  	justify-content: space-between;
-  }
-
-  .logo {
-    margin: 0;
-  }
-
-    /*---mediaquary 1024 start ----*/
+/*---mediaquary 1024 start ----*/
 @media (max-width: 1024px) {
 
-    .container{
-    margin: 0 auto;
-    width: 1024px;
-    height: 1600px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    background: url(../images/main10.jpg);
-    font-family: "Berkshire Swash",stylish;
-          }
+    .container {
+        margin: 0 auto;
+        width: 1024px;
+        height: 1500px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        background: url(../images/sub10.jpg);
+        font-family: "Berkshire Swash", stylish;
+        background-size: cover;
+    }
 
     .header-container {
-    flex-direction: row;
-    justify-content: space-around;
-    height: auto;
-    width: 99.5%;
-     position: relative;
-        top: 20px;
-      	}
-  .main-menu {
- 		width: 60%;
-     position: absolute;
-      top: -30px;
-     justify-content: space-between;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 90%;
+         height: auto;
+        position: relative;
+                }
 
-  }
-   .logo {
-    margin: 0;
-      position: absolute;
-       top: 50px;
-       left: 35%;
-     }
+    .main-menu {
+        width: 60%;
+        height: auto;
+        position: absolute;
+        top: -50px;
+        justify-content: space-between;
+        z-index: 10;
+           }
+
+    .logo {
+        margin: 0;
+        position: absolute;
+        top: 50px;
+        left: 35%;
+    }
+
+    /*----#contents start--*/
+    #contents {
+        /*    flex: 1;*/
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        position: relative;
+        justify-content: center;
+        align-content: center;
+        /*  background: url(../images/sub8.jpg) center no-repeat;*/
+        background-size: cover;
+    }
+}
+
+/*---mediaquary 768 start ----*/
+@media (max-width: 768px) {
+    .logo{
+        width: 40%;
+        position: absolute;
+        left: 40%;
+    }
+    footer{
+        margin-bottom: 5%;
+    }
+}
+
+/*---mediaquary 640 start ----*/
+@media (max-width: 640px) {
+    .logo{
+        width: 50%;
+        position: absolute;
+        left: 48%;
+    }
+    footer{
+        margin-bottom: 5%;
+    }
+}
+
+/*---mediaquary 360 start ----*/
+@media (max-width: 360px) {
+    .container{
+        height: auto;
+    }
+    .logo{
+        width: 90%;
+        position: absolute;
+        left: 95%;
+    }
+    footer{
+        margin-bottom: 10%;
+    }
+    footer p{
+        margin-top: 5%;
+    }
 }
