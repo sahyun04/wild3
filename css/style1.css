@@ -680,13 +680,15 @@ footer {
     .main-menu {
         width: 60%;
         height: auto;
-        margin-top: 10%;
+        margin-top: 13%;
         justify-content: space-between;
     }
 
     .logo {
+        width: 30%;
         position: absolute;
-        left: 40%;
+        left: 34%;
+
     }
 
     /*----#contents start--*/
